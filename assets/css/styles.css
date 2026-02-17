@@ -253,7 +253,7 @@ img {
 }
 
 /* Active link */
-.active__link {
+.active-link {
   color: var(--first-color);
   text-shadow: 0 8px 16px var(--first-color);
 }

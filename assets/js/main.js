@@ -143,13 +143,15 @@ const scrollActive = () => {
         const id = section.id, // id of each section
             top = section.offsetTop - 50, // Distance from the top edge
             height = section.offsetHeight, // Element height
-            link = document.querySelector('nav__menu a[href*=' + id + ']'); // id nav link
+            link = document.querySelector('a[href*=' + id + ']'); // id nav link
 
         if (!link) return
 
         link.classList.toggle('active-link', scrollY > top && scrollY <= top + height);
     })
 }
+
+window.addEventListener('scroll', scrollActive);
 
 /*=============== CUSTOM CURSOR ===============*/
 const cursor = document.querySelector('.cursor')
